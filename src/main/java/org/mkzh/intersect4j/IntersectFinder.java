@@ -5,22 +5,21 @@ import org.mkzh.intersect4j.util.Intersect;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
-import java.util.List;
 
 public class IntersectFinder {
-    private static final int DEFAULT_DEPTH = 64;
+    private static final int DEFAULT_PRECISION = 8;
+    private static final int SUPPLEMENTARY_FACTOR = 2;
 
     public static Intersect find(String func1, String func2, double min, double max) {
-        return find(func1, func2, min, max, DEFAULT_DEPTH);
+        return find(func1, func2, min, max, DEFAULT_PRECISION);
     }
-    public static Intersect find(String func1, String func2, double min, double max, int depth) {
-        return find(func1, func2, BigDecimal.valueOf(min), BigDecimal.valueOf(max), depth);
+    public static Intersect find(String func1, String func2, double min, double max, int precision) {
+        return find(func1, func2, BigDecimal.valueOf(min), BigDecimal.valueOf(max), precision);
     }
     public static Intersect find(String func1, String func2, BigDecimal min, BigDecimal max) {
-        return find(func1, func2, min, max, DEFAULT_DEPTH);
+        return find(func1, func2, min, max, DEFAULT_PRECISION);
     }
-
-    public static Intersect find(String func1, String func2, BigDecimal min, BigDecimal max, int depth) {
-        return FindIntersect.find(func1, func2, min, max, new MathContext(depth), 1).get(0);
+    public static Intersect find(String func1, String func2, BigDecimal min, BigDecimal max, int precision) {
+        return FindIntersect.find(func1, func2, min, max, new MathContext(precision), new MathContext(precision * SUPPLEMENTARY_FACTOR));
     }
 }

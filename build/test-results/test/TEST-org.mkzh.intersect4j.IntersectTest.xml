@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.mkzh.intersect4j.IntersectTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-06-06T01:47:36" hostname="AS1746" time="0.084">
+  <properties/>
+  <testcase name="testLogarithmicCustomPrecision()" classname="org.mkzh.intersect4j.IntersectTest" time="0.07"/>
+  <testcase name="testDoubleIntersectOnlyFindsOne()" classname="org.mkzh.intersect4j.IntersectTest" time="0.004"/>
+  <testcase name="testTrigonometry()" classname="org.mkzh.intersect4j.IntersectTest" time="0.005"/>
+  <testcase name="testStandard()" classname="org.mkzh.intersect4j.IntersectTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
